@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { JSXElementConstructor } from "react";
 
 import { ReactElement } from "react";
 
@@ -20,7 +21,7 @@ export type IInput = {
   name: string;
   type?: string;
   size?: "large" | "small";
-  value?: string | string[] | undefined;
+  value?: number | undefined;
   id?: string;
   placeholder?: string;
   validation?: object;
@@ -33,6 +34,7 @@ export type IInput = {
   rules?: any;
   disabled?: boolean;
   min?: number;
+  onChange?: (e: any) => void;
 };
 
 export type IStuffInfoFieldProps = {
@@ -54,4 +56,25 @@ export type IFieldProps = {
 export type SelectOptions = {
   label: string;
   value: string;
+};
+
+export type ISelectFieldProps = {
+  options?: SelectOptions[];
+  name: string;
+  size?: "large" | "small" | "middle";
+  value?: string | string[] | undefined;
+  placeholder?: string;
+  label?: any;
+  defaultValue?: string | undefined | null;
+  required?: any;
+  handleChange?: (el: string) => void;
+  onChange?: (el: string) => void;
+  mode?: any;
+  rules?: any;
+  variant?: any;
+  onSearch?: (value: string) => void;
+  loading?: boolean;
+  dropdownRender?: (
+    menu?: ReactElement<any, string | JSXElementConstructor<any>>
+  ) => ReactElement<any, string | JSXElementConstructor<any>>;
 };

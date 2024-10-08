@@ -12,13 +12,13 @@ const Sider = () => {
     },
     {
       id: 2,
-      title: "Shop",
-      link: "shop",
+      title: "Katha to Square Feet",
+      link: "katha-to-square-feet",
     },
     {
       id: 3,
-      title: "Contact",
-      link: "contact",
+      title: "Measurment",
+      link: "measurment",
     },
     {
       id: 4,

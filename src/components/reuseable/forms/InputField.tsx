@@ -21,6 +21,7 @@ const InputField = ({
   rules,
   required,
   disabled,
+  onChange,
   min,
 }: IInput) => {
   const {
@@ -96,6 +97,7 @@ const InputField = ({
                     min={min}
                     className={`appearance-none border rounded-rounded-full w-full py-2 px-3 leading-tight text-red-500 placeholder:text-slate-200 placeholder:opacity-40 focus:outline-none focus:shadow-outline-none ${className}`}
                     value={value ? value : field.value}
+                    onChange={onChange}
                     autoComplete="off"
                   />
                 )}
